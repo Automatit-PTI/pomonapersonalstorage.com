@@ -1,0 +1,22 @@
+# Redirect 404 errors to 404.php
+ErrorDocument 404 http://pomonapersonalstorage.com/404.php
+
+# Redirect references to /index.php to full non-www root path of site
+Options +FollowSymLinks
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ http://pomonapersonalstorage.com/$1 [R=301,L] 
+
+# Redirect www to non-www version of site
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www.pomonapersonalstorage.com [NC]
+RewriteRule ^(.*)$ http://pomonapersonalstorage.com/$1 [L,R=301]
+
+# 301s to help facilitate transfer to new site
+#[type] [code] [old page] [new page]
+
+
+# Allow server side includes
+AddType text/html .html
+AddHandler server-parsed .html
+Options Indexes FollowSymLinks Includes

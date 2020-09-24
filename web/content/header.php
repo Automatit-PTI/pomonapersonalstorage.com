@@ -11,7 +11,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="js/accordion.js"></script>
     <?php if(strstr($_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'],'index')) { ?>   
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script src="//maps.google.com/maps/api/js?key=AIzaSyB_0KxyJN1wH6B_H3jdXLCOLxxdnGCtQ14"></script>
     	<script type="text/javascript" src="js/gmap.js"></script>
     <?  } ?> 
     <script type="text/javascript">
